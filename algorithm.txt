@@ -1,0 +1,53 @@
+//Honor Pledge: I pledge that I have neither
+//given nor received any undue help on this assignment.
+//
+//strangni
+//
+//CS 240 - Assignment 4 - Stacks Upon Stacks - Black Belt - Any Number of Students
+//Created by: Nicholas Strange
+
+Goals: 
+		- Create Stack, Student, and Address classes.
+		- Read in data from a text file and use it to create a Stack of Students with Addresses.
+		- Allow user to print the Stack of Students.
+		
+Input:
+		- Text file
+		- Menu selection (load Students, print Students, or exit) from the user
+		
+Output:
+		- List of Students from text file
+		
+Requirements:
+		- Any number of students stored in the text file should be handled by the program and added to the Stack.
+		- Each student should be printed on a separate line in the console.
+		- Program must contain Driver, Stack, Student, and Address classes.
+		- Stack must be generic.
+		- Program must handle all exceptions.
+		- Empty lines should not be printed.
+		- User must be presented with a menu; program must collect user selection and function accordingly.
+		
+Step-by-step Details:
+		1. Create Student class
+				- specify first name, last name, ID, Address, and GPA attributes
+				- define constructors, including one that sets attributes
+				- define methods that print and return attributes
+		
+		2. Create Stack class
+				- specify top, size, and generic array attributes
+				- define constructors, including one that takes in size as a parameter
+				- define methods, including push and pop; push adds a new element to the top of the stack, and pop returns the element at the top
+				
+		3. Create Address class
+				-specify street address, city, state, and zip code attributes
+				- define constructors, including one that sets attributes
+				- define methods that print and return attributes
+				
+		4. Create Driver class
+				- Use a loop to determine the number of Students in the file.
+				- Instantiate a Student Stack using the number of Students determined from the step above.
+				- In a loop:
+					- get user's menu selection
+					- if user selects to load students, read in each line of the text file, parse it, and pass the tokens to the Address and Student constructors
+					- push new Student onto the Student Stack
+					- if user selects to print students, pop the students off the stack one-by-one and print them
